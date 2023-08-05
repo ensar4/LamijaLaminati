@@ -1,0 +1,333 @@
+/* 
+** Intro Section Styles
+*/
+
+.page_slider {
+  position: relative;
+  overflow: hidden;
+  //fix slider bug on small screens
+  clear: both;
+
+  &.static {
+    .flex-counter {
+      display: none;
+    }
+  }
+
+  .video-bg {
+    .s-overlay.ds:before {
+      opacity: 0.5;
+      z-index: 5;
+    }
+
+    @media (min-width: 1300px) {
+      background-image: none !important;
+    }
+  }
+
+  video {
+    min-width: 100%;
+    position: absolute;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+
+  .flexslider {
+    //making every slide same height (stretch) for nice background on every slide
+    &.slider-1 {
+      position: relative;
+
+      .intro_layers {
+        max-width: 450px;
+      }
+
+      img {
+        display: none;
+      }
+
+      li.slide-1 {
+        height: 1000px;
+        @media(max-width: 1599px) {
+          height: 800px;
+        }
+        @media(max-width: 1199px) {
+          height: 600px;
+        }
+        @media(max-width: 991px) {
+          height: 550px;
+        }
+
+        .main-title {
+          margin-bottom: 30px;
+          @media(min-width: 1200px) {
+            margin-bottom: 40px;
+          }
+
+          & h1 {
+            line-height: 1;
+            @media(min-width: 1200px) {
+              font-size: 90px;
+              margin-bottom: 40px;
+            }
+          }
+        }
+
+        .text {
+          margin-bottom: 30px;
+          @media(min-width: 1200px) {
+            margin-bottom: 50px;
+          }
+        }
+
+        .slider-button {
+          .btn {
+            margin-bottom: 0;
+          }
+        }
+
+        .social-icons {
+          @media(max-width: 1499px) {
+            display: none;
+          }
+          position: absolute;
+          top: 51%;
+          left: 44px;
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+
+          a {
+            margin: 3px 0;
+            padding: 13px;
+            border-radius: 50%;
+
+            &:hover {
+              background: $colorMain;
+              color: $lightColor;
+            }
+          }
+        }
+
+        .slider-social {
+          margin-top: 40px;
+          @media(min-width: 1500px) {
+            display: none;
+            margin-top: 0;
+          }
+          @media(min-width: 1200px) {
+            margin-top: 50px;
+          }
+
+          .social-icons {
+            position: static;
+            display: flex;
+            flex-direction: row;
+
+            a {
+              margin: 0;
+              display: block;
+            }
+
+            a + a {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    &.slider-2 {
+      position: relative;
+
+      .intro_layers {
+        max-width: 710px;
+      }
+
+      img {
+        display: none;
+      }
+
+      li.slide-1 {
+        height: 1000px;
+        @media(max-width: 1599px) {
+          height: 800px;
+        }
+        @media(max-width: 1199px) {
+          height: 600px;
+        }
+        @media(max-width: 991px) {
+          height: 550px;
+        }
+
+        .main-title {
+          margin-bottom: 30px;
+          @media(min-width: 1200px) {
+            margin-bottom: 40px;
+          }
+
+          & h1 {
+            line-height: 1;
+            @media(min-width: 1200px) {
+              font-size: 90px;
+              margin-bottom: 40px;
+            }
+          }
+        }
+
+        .text {
+          margin-bottom: 30px;
+          @media(min-width: 1200px) {
+            margin-bottom: 50px;
+          }
+        }
+
+        .slider-button {
+          .btn {
+            margin-bottom: 0;
+          }
+        }
+
+        .social-icons {
+          @media(max-width: 1499px) {
+            display: none;
+          }
+          position: absolute;
+          top: 51%;
+
+          right: 44px;
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+
+          a {
+            margin: 3px 0;
+            padding: 13px;
+            border-radius: 50%;
+
+            &:hover {
+              background: $colorMain;
+              color: $lightColor;
+            }
+          }
+        }
+
+        .slider-social {
+          margin-top: 40px;
+          @media(min-width: 1500px) {
+            display: none;
+            margin-top: 0;
+          }
+          @media(min-width: 1200px) {
+            margin-top: 50px;
+          }
+
+          .social-icons {
+            position: static;
+            display: flex;
+            flex-direction: row;
+
+            a {
+              margin: 0;
+              display: block;
+            }
+
+            a + a {
+              margin-left: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //lg and bigger layout
+  @media(min-width: 300px) {
+
+    .cs,
+    .ds,
+    .ds.ms {
+      &:before {
+        opacity: 0.7;
+      }
+    }
+    .top-space {
+      .container-fluid,
+      .container {
+        margin-top: 70px;
+        @media(min-width: 1200px) {
+          margin-top: 145px;
+        }
+      }
+    }
+    .container-fluid,
+    .container,
+    img + .container {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+    [class*="row"] {
+      height: 100%;
+    }
+  }
+
+  //dots - horizontal
+  .flex-control-nav {
+    position: absolute;
+    left: 44px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    @media(max-width: 1499px){
+      bottom: 50px;
+      top: auto;
+      left: 50%;
+      transform: translateX(-50%) translateY(0%);
+      flex-direction: row;
+    }
+    @media(max-width: 768px){
+      bottom: 30px;
+    }
+    @media(max-width: 575px){
+      display: none;
+    }
+    li{
+      @media(max-width: 1499px){
+        padding: 0;
+      }
+      a{
+        height: 60px;
+        width: 2px;
+        border-radius: 0;
+        border: 0;
+        background-color: $darkgreyColor;
+
+        &.flex-active{
+          background-color: $colorMain;
+          width: 3px;
+        }
+        @media(max-width: 1499px){
+          width: 60px;
+          height: 2px;
+          &.flex-active{
+            background-color: $colorMain;
+            width: 60px;
+            height: 3px;
+          }
+        }
+      }
+    }
+  }
+}

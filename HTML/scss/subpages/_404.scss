@@ -1,0 +1,47 @@
+/*
+** 404
+*/
+
+.page_404 {
+  position: relative;
+  .main-text-404 {
+	font-size: 300px;
+	line-height: 0.75;
+	@media(max-width: 575px) {
+	  font-size: 150px;
+	}
+  }
+  p {
+	font-size: 20px;
+  }
+  .container{
+	.social-icons{
+	  margin-top: 30px;
+	  @media(min-width: 1200px){
+		display: none;
+	  }
+	}
+  }
+  .social-icons a{
+	padding: 10px;
+	border-radius: 50%;
+	&:hover{
+	  background-color: $colorMain;
+	  color: $lightColor;
+	}
+  }
+  .container + .social-icons{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 50px;
+	display: flex;
+	flex-direction: column;
+	a{
+	  margin: 10px 0;
+	}
+	@media(max-width: 1199px){
+	  display: none;
+	}
+  }
+}

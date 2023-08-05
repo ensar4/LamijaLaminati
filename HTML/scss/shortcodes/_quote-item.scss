@@ -1,0 +1,150 @@
+.shortcode-quote {
+  &.layout-1 {
+
+    .quote-item {
+      display: flex;
+      @media (max-width: 575px) {
+        flex-direction: column;
+      }
+
+      .quote-img {
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+        margin-right: 20px;
+        @media (max-width: 575px) {
+          margin-right: 0;
+          margin-bottom: 15px;
+        }
+
+        img {
+          border-radius: 50%;
+        }
+      }
+
+      .quote-content {
+        padding-top: 5px;
+        padding-right: 20px;
+        @media (max-width: 575px) {
+          padding-top: 0;
+          padding-right: 0;
+        }
+
+        h5 {
+          margin-bottom: 6px;
+        }
+
+        span {
+          margin-bottom: 25px;
+          display: inline-block;
+          @media (max-width: 575px) {
+            margin-bottom: 15px;
+          }
+        }
+
+        blockquote {
+          max-width: 100%;
+          padding-left: 0 !important;
+          margin-bottom: 35px;
+          @media (max-width: 575px) {
+            margin-bottom: 20px;
+            padding-left: 30px !important;
+          }
+
+          &:before {
+            top: 2px;
+            left: -40px;
+            width: 20px;
+            height: 17px;
+            @media (max-width: 575px) {
+              display: block;
+              left: 0;
+            }
+          }
+        }
+
+        .quote-date {
+          border-top: 1px solid $borderColor;
+          padding-top: 35px;
+
+          span {
+            margin-bottom: 0;
+          }
+
+          @media (max-width: 575px) {
+            padding-top: 20px;
+          }
+
+          i {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+
+  }
+  &.layout-2{
+    @media(min-width: 1600px){
+      margin-left: -180px;
+      margin-right: -180px;
+      width: calc( 100% + 360px );
+    }
+
+    .item-quote {
+      margin: 0;
+      transition: all 0.3s  ease-in-out;
+      padding-top: 70px;
+
+      .quote-image{
+        border-radius: 50%;
+        overflow: hidden;
+        width: 130px;
+        height: 130px;
+        margin: 0 auto -70px;
+        transform: translateY(-70px);
+        img{
+          object-fit: cover;
+          height: 100%;
+        }
+      }
+      .quote-content{
+
+        @media(min-width: 1200px){
+          padding: 40px 60px 40px;
+        }
+        @media(min-width: 1600px){
+          padding: 60px 100px 50px;
+        }
+        padding: 30px 40px;
+
+        blockquote{
+          border: none;
+          margin: 0 auto !important;
+          padding-left: 0 !important;
+          padding-top: 50px;
+          p{
+            text-indent: 0;
+          }
+          @media(max-width: 1199px){
+            margin: 20px 0 0;
+            padding-top: 50px;
+          }
+          &:before{
+            left: 50%;
+            transform: translateX(-50%);
+            width: 39px;
+            height: 33px;
+          }
+        }
+        h6{
+          margin-top: 27px;
+          font-size: 24px;
+          margin-bottom: 10px;
+          @media(max-width: 1199px){
+            margin-top: 20px;
+          }
+        }
+      }
+    }
+  }
+}

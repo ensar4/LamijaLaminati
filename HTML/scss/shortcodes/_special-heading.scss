@@ -1,0 +1,71 @@
+/*
+** Special Heading
+*/
+.special-heading {
+  word-wrap: break-word;
+  line-height: 1;
+  margin: 0;
+  width: 100%;
+  &.with-decoration {
+    span {
+      padding-left: 20px;
+      position: relative;
+      &:before{
+        content: '';
+        width: 10px;
+        height: 10px;
+        background: $colorMain;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        border-radius: 2px;
+      }
+    }
+  }
+
+  & + p.special-heading {
+    margin-top: 8px !important;
+  }
+
+  span, mark {
+    display: inline-block;
+  }
+
+  & + .counter-heading {
+    margin-top: 25px !important;
+    @media(max-width: 991px) {
+      margin-top: 15px !important;
+    }
+  }
+
+  &.counter-heading {
+    & + .special-heading {
+      margin-top: 25px !important;
+      @media(max-width: 991px) {
+        margin-top: 15px !important;
+      }
+    }
+  }
+}
+
+p.special-heading {
+  max-width: 560px;
+  line-height: 1.4;
+
+
+  &.text-center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  + .special-heading {
+    margin-top: 5px !important;
+  }
+
+  .big {
+    font-size: 20px;
+  }
+}
+
+

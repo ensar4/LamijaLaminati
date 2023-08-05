@@ -1,0 +1,128 @@
+/* bootstrap tabs*/
+.nav-tabs {
+  border: none;
+  margin-bottom: -1px;
+
+  .nav-item {
+    padding: 0;
+    margin-bottom: 0;
+    @media(max-width: 575px) {
+      width: 100%;
+    }
+  }
+
+  .nav-link {
+    border: 1px solid $borderColor;
+    border-radius: 0;
+    margin-right: 4px;
+    padding: 22px 42px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1;
+    text-transform: capitalize;
+    background: transparent;
+    color: $darkgreyColor;
+    @media(max-width: 1200px) {
+      min-width: 200px;
+    }
+    @media(max-width: 991px) {
+      min-width: 150px;
+    }
+    @media(max-width: 575px) {
+      width: 100%;
+    }
+
+
+    &:hover {
+      color: $lightColor;
+      background: $colorMain;
+      border-color: $colorMain;
+    }
+  }
+
+  .nav-item.show .nav-link,
+  .nav-link.active {
+    color: $lightColor;
+    background: $colorMain;
+    border-color: $colorMain;
+  }
+}
+
+
+.tab-content {
+  border: 1px solid $borderColor;
+  box-shadow: none;
+  padding: 40px;
+  @media(max-width: 575px) {
+    padding: 30px;
+  }
+
+  &.border-none {
+    border: none;
+  }
+  &.padding-none{
+    padding: 0;
+    @media(max-width: 991px){
+      padding-top: 20px;
+    }
+  }
+}
+
+.tab-pane {
+  .media {
+    img {
+      max-width: 40%;
+
+      &:first-child {
+        margin-right: 10px;
+      }
+    }
+
+    h3, h4, h5 {
+      font-weight: 900;
+    }
+  }
+}
+
+.vertical-tabs {
+  .nav-tabs {
+    display: flex;
+    flex-direction: column;
+    .media{
+      align-items: center;
+    }
+    .nav-item +.nav-item{
+      margin-top: 12px;
+    }
+    .nav-link{
+      text-align: left;
+      margin-right: 0;
+      border: 0;
+      box-shadow: $boxShadow;
+      padding: 32px 42px;
+      i{
+        color: inherit;
+      }
+      &.active,  &:hover{
+        h6,i, h5{
+          color: $lightColor;
+        }
+      }
+    }
+  }
+  &.video-tabs{
+    .nav-item +.nav-item{
+      margin-top: 40px;
+      @media(max-width: 991px){
+        margin-top: 20px;
+      }
+    }
+    .tab-content{
+      padding-left: 70px;
+      @media(max-width: 991px){
+        padding-left: 0;
+        padding-top: 20px;
+      }
+    }
+  }
+}

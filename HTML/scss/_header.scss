@@ -1,0 +1,233 @@
+/*
+** Header
+*/
+
+.page_header {
+  //same as .page_header_side
+  transition: $headerTransition;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  margin: 0;
+  padding: 0;
+  //display_table fix on affix
+  height: auto;
+
+  .boxed &,
+  &.affix {
+    position: fixed !important;
+    z-index: 1001;
+
+    //remove bottom border for affixed header with s-borderbottom class
+    &:after {
+      background-color: transparent;
+    }
+  }
+  //hidding top border on affixed header
+  &.affix.s-bordertop::before {
+    display: none;
+  }
+
+  @media (max-width: 991px) {
+    &.mobile-active {
+      z-index: 1003;
+      opacity: 1;
+    }
+  }
+
+  //fix bug when refresh page at the bottom and header goes down
+  &.affix-bottom {
+    //!important is necessary
+    top: 0 !important;
+    position: fixed;
+  }
+
+  //min height for mobile toggler be always on header
+  //for prevent header mobile menu toggler overlap bordered header
+  // 62 - broken design on 60px color toggler - back to 60
+  .row {
+    min-height: 50px;
+  }
+
+ 
+  
+
+  a {
+    display: inline-block;
+  }
+
+  .btn {
+    margin-bottom: 0;
+    padding: 10px 28px;
+    min-width: 130px;
+  }
+  .widget_search {
+    width: 100%;
+    max-width: 375px;
+    margin: 0;
+  }
+
+  &.header-1 {
+    @media (min-width: 1200px){
+      .sf-menu>li>a {
+        padding-top: 12px;
+        padding-bottom: 12px;
+      }
+    }
+
+    .logo,
+    .appointment {
+      @media (min-width: 1200px) {
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s ease-in-out;
+      }
+    }
+    &.affix {
+      .logo,
+      .appointment {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+}
+
+//when refreshing page - header height is smaller because it is affixed
+//fixing
+//absolute header when using header on slider or on title (for parallax or image background)
+.header_absolute {
+  position: absolute;
+  width: 100%;
+  .page_header,
+  .page_topline,
+  .page_header_wrapper,
+  .page_toplogo {
+    z-index: 1002;
+    position: absolute;
+    right: 0;
+    left: 0;
+    &.affix-wrapper {
+      z-index: 1003;
+    }
+  }
+
+  //&.cover-background {
+  .page_topline,
+  .page_toplogo,
+  .page_header.affix-top,
+  .page_header_wrapper,
+  .page_title {
+    background-color: transparent;
+  }
+}
+
+//other header sections
+.page_topline {
+  line-height: 1.4;
+  .btn {
+    min-width: 130px;
+  }
+
+  &.small-text i {
+    font-size: 14px;
+  }
+
+  .icon-inline {
+    justify-content: center;
+  }
+  .social-icons {
+    display: inline-block;
+  }
+  //topline menu
+  .widget_nav_menu {
+    display: inline-block;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .dropdown-menu {
+    margin: 23px 0 0 0;
+  }
+  .dropdown-language {
+    //flags
+    a > img {
+      max-width: 16px;
+      position: relative;
+      bottom: 1px;
+      margin-right: 6px;
+    }
+  }
+
+  //news owl-carousel
+  .owl-news-slider-dates {
+    font-weight: 700;
+  }
+  .topline-news-item {
+    height: 2em;
+    line-height: 2em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 0 90px;
+    .cat-links {
+      display: inline;
+      position: static;
+      a {
+        border-radius: 5em;
+      }
+    }
+  }
+}
+
+.page_toplogo, .page_topline {
+  .media{
+    @media (max-width: 1199px) {
+      margin: 10px;
+    }
+    h6{
+      margin-bottom: 0;
+    }
+    h6 +p{
+      margin-top: 5px;
+    }
+  }
+  @media (min-width: 1200px) {
+  .media + .media {
+    margin: 0 0 0 40px;
+  }
+}
+  @media (min-width: 1600px) {
+    .media + .media {
+      margin: 0 0 0 60px;
+    }
+  }
+
+
+  .widget_search form,
+  .widget_product_search form,
+  .widget_search input,
+  .widget_product_search input {
+    max-width: none;
+  }
+}
+
+.page_topline,
+.page_toplogo,
+.page_header {
+  .container-fluid {
+    @media (min-width: 1500px) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+  }
+}
+
+@import "header/header_includes";
+@import "header/logo";
+@import "header/search_modal";

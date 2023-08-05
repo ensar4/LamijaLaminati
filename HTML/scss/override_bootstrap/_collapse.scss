@@ -1,0 +1,64 @@
+/* bootstrap collapse*/
+//unstyled
+[data-toggle="collapse"] {
+  display: block;
+  position: relative;
+
+  &:after {
+    content: "-";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    line-height: 0.7;
+    font-size: 40px;
+    color: $colorMain;
+  }
+}
+
+//cards as tabs
+[role="tablist"] {
+  & + & {
+    margin-top: 57px;
+  }
+
+  .card {
+    border-radius: 0;
+    border: none;
+    background: none;
+
+
+    & + .card {
+      margin-top: 30px;
+    }
+  }
+
+  .card-header {
+    padding: 0;
+    background: transparent;
+    border: none;
+
+    a {
+      position: relative;
+      padding-left: 45px;
+      text-transform: capitalize;
+
+      &.collapsed:not(:hover) {
+        &:before {
+          bottom: 100%;
+        }
+      }
+    }
+  }
+
+  .card-body {
+    padding: 15px 45px;
+    border-left: 2px solid $colorMain;
+    margin-top: 25px;
+    margin-left: 40px;
+  }
+
+  .media img {
+    max-width: 80px;
+  }
+}

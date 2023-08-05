@@ -1,0 +1,21 @@
+.shortcode-blog {
+  .vertical-item{
+	&.content-padding{
+	 .item-content{
+	   @media(max-width: 1300px){
+		 padding: 40px 30px;
+	   }
+	 }
+	}
+  }
+  .side-item{
+	@media(min-width: 992px){
+	  .item-media{
+		img{
+		  height: 450px;
+		  object-fit: cover;
+		}
+	  }
+	}
+  }
+}

@@ -1,0 +1,124 @@
+.pricing-plan {
+  text-align: center;
+  padding: 60px 55px    ;
+  transition: transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
+
+  &:hover {
+    transform: translateY(-15px);
+    box-shadow: 0px 8px 12px 3px rgba(0, 0, 0, 0.35);
+  }
+
+  .plan-header {
+    margin-bottom: 40px;
+    margin-top: -5px;
+    &[class*='bg-'] {
+      padding: 30px 0;
+      margin-left: -55px;
+      margin-right: -55px;
+      margin-top: -70px;
+    }
+  }
+
+  .plan-features{
+    margin-bottom: 50px;
+  }
+
+  .price-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-size: 30px;
+    flex-wrap: wrap;
+    line-height: 0.8;
+    font-weight: 300;
+    margin-bottom: 55px;
+
+    &[class*='bg-'] {
+      padding: 30px 0;
+      margin-left: -55px;
+      margin-right: -55px;
+
+      .plan-price {
+        color: $lightColor;
+      }
+    }
+
+    .plan-price {
+      color: $colorMain;
+      font-weight: 500;
+      font-size: 80px;
+      font-family: 'Fira Sans Condensed', sans-serif;
+    }
+
+    .plan-sign, .plan-month {
+      position: relative;
+      top: -20px;
+    }
+  }
+
+  .plan-button {
+    padding-top: 60px;
+    margin-left: -55px;
+    margin-right: -55px;
+    border-top: 1px solid $borderColor;
+    .btn {
+      margin-bottom: 0;
+    }
+  }
+
+  @media(max-width: 1199px) {
+    padding: 45px 40px;
+
+
+    .price-wrap {
+      margin-bottom: 30px;
+      &[class*='bg-'] {
+        margin-left: -40px;
+        margin-right: -40px;
+      }
+    }
+    .plan-features {
+      margin-bottom: 20px;
+    }
+
+    .plan-button{
+      padding-top: 30px;
+      margin-left: -40px;
+      margin-right: -40px;
+    }
+
+    .plan-header {
+      margin-bottom: 20px;
+      margin-top: 0;
+
+      &[class*='bg-'] {
+        margin-left: -40px;
+        margin-right: -40px;
+        margin-top: -45px;
+      }
+    }
+  }
+}
+
+.cs {
+  .price-wrap {
+    .plan-price {
+      color: $lightColor;
+    }
+
+    &[class*='bg-'] {
+      background-color: $lightColor;
+
+      .plan-price {
+        color: $colorMain;
+      }
+    }
+  }
+
+  .plan-header {
+    &[class*='bg-'] {
+      background-color: $lightColor;
+    }
+  }
+}
+
