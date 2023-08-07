@@ -127,7 +127,7 @@ h6 {
 	font-variant-numeric: lining-nums;
 	font-weight: 500;
 	line-height: 1.2em;
-	text-transform: capitalize;
+	
 	word-break: break-word;
 }
 
@@ -372,7 +372,7 @@ blockquote footer,
 blockquote footer h5,
 [class*='-block-quote'] footer h5 {
 	margin-bottom: 0.1rem;
-	text-transform: capitalize;
+	
 }
 
 blockquote cite,
@@ -462,7 +462,7 @@ pre {
 	font-weight: 300;
 	letter-spacing: 0;
 	line-height: 1.1em;
-	text-transform: capitalize;
+	
 }
 
 dt {
@@ -566,7 +566,7 @@ ul.list-styled li:before {
 	font-size: 16px;
 	margin: 0;
 	padding: 0;
-	text-transform: capitalize;
+	
 }
 
 .breadcrumb > li.breadcrumb-item {
@@ -846,7 +846,7 @@ button[type="submit"],
 	min-width: 150px;
 	padding: 10px 35px;
 	text-align: center;
-	text-transform: capitalize;
+	
 	white-space: nowrap;
 }
 
@@ -909,7 +909,7 @@ select.form-control {
 	font-size: 16px;
 	height: auto;
 	line-height: 2.4rem;
-	text-transform: capitalize;
+	
 }
 
 select option,
@@ -943,7 +943,7 @@ textarea:focus {
 	font-weight: 300;
 	line-height: 2.4rem;
 	opacity: 1;
-	text-transform: capitalize;
+	
 	transform: translateX(0%);
 	transition: all 0.6s;
 }
@@ -955,7 +955,7 @@ textarea:focus {
 	font-weight: 300;
 	line-height: 2.4rem;
 	opacity: 1;
-	text-transform: capitalize;
+	
 	transform: translateX(0%);
 	transition: all 0.6s;
 }
@@ -967,7 +967,7 @@ textarea:focus {
 	font-weight: 300;
 	line-height: 2.4rem;
 	opacity: 1;
-	text-transform: capitalize;
+	
 	transform: translateX(0%);
 	transition: all 0.6s;
 }
@@ -979,7 +979,7 @@ textarea:focus {
 	font-weight: 300;
 	line-height: 2.4rem;
 	opacity: 1;
-	text-transform: capitalize;
+	
 }
 
 .form-control:focus:-moz-placeholder,
@@ -1206,7 +1206,7 @@ select:-webkit-autofill:focus {
 	margin-right: 4px;
 	padding: 22px 42px;
 	text-align: center;
-	text-transform: capitalize;
+	
 }
 
 @media (max-width: 1200px) {
@@ -1375,7 +1375,7 @@ select:-webkit-autofill:focus {
 [role="tablist"] .card-header a {
 	padding-left: 45px;
 	position: relative;
-	text-transform: capitalize;
+	
 }
 
 [role="tablist"] .card-header a.collapsed:not(:hover):before {
@@ -1572,7 +1572,7 @@ select:-webkit-autofill:focus {
 	min-width: 150px;
 	padding: 10px 30px;
 	text-align: center;
-	text-transform: capitalize;
+	
 	white-space: nowrap;
 }
 
@@ -1677,7 +1677,7 @@ select:-webkit-autofill:focus {
 .media-body h6 {
 	line-height: 1;
 	margin-top: 0;
-	text-transform: capitalize;
+	
 }
 
 .media-body h1 + p,
@@ -1895,7 +1895,7 @@ p + .progress {
 	line-height: 1.6;
 	margin-bottom: 26px !important;
 	padding-right: 45px;
-	text-transform: capitalize;
+
 }
 
 .progress {
@@ -2531,7 +2531,7 @@ Owl Default Theme
 }
 
 .flex-pauseplay span {
-	text-transform: capitalize;
+	
 }
 
 /* Clearfix for the .slides element */
@@ -3562,7 +3562,7 @@ a.pswp__share--download:hover {
 	font-size: 16px;
 	font-weight: 300;
 	margin-top: 4px;
-	text-transform: capitalize;
+
 }
 
 .percent {
@@ -19750,7 +19750,7 @@ aside > * + *,
 	color: #f15201;
 	font-size: 24px;
 	margin-bottom: 30px;
-	text-transform: capitalize;
+
 }
 
 @media (max-width: 768px) {
@@ -20525,7 +20525,7 @@ widget_recent_entries
 	letter-spacing: 0;
 	line-height: 1.1em;
 	margin: 0.8em 0;
-	text-transform: capitalize;
+	
 }
 
 /* widget_tag_cloud */
@@ -20542,7 +20542,7 @@ widget_recent_entries
 	margin: 0 6px 10px 0;
 	padding: 11px 27px;
 	text-align: center;
-	text-transform: capitalize;
+
 }
 
 .tagcloud a:hover,
@@ -20869,7 +20869,7 @@ widget_recent_entries
 	color: #686665;
 	font-size: 16px;
 	line-height: 1.4;
-	text-transform: capitalize;
+	
 }
 
 .widget_post_tabs .vertical-item .item-content p i {
@@ -23153,7 +23153,7 @@ a img.aligncenter {
 	min-width: 8em;
 	padding: 0.25em 0.8em 0.05em;
 	text-align: center;
-	text-transform: capitalize;
+	
 }
 
 .post-nav .nav-links .nav-title {
@@ -23275,7 +23275,7 @@ a img.aligncenter {
 		line-height: 1.1em;
 		padding: 15px 1.1em;
 		text-decoration: none;
-		text-transform: capitalize;
+	
 		transition-property: color, background-color, border-color, padding-top, padding-bottom;
 		zoom: 1;
 	}
@@ -23657,7 +23657,7 @@ a img.aligncenter {
 		position: fixed;
 		right: 100%;
 		text-align: left;
-		text-transform: capitalize;
+		
 		top: 0;
 		transition: all 0.4s ease-in-out;
 	}
@@ -23887,7 +23887,7 @@ a img.aligncenter {
 	letter-spacing: 0;
 	line-height: 1.1em;
 	padding: 10px 40px;
-	text-transform: capitalize;
+	
 }
 
 .menu-click a:hover {
@@ -24331,7 +24331,7 @@ a.logo.flex-column.text-center {
 	font-weight: 300;
 	letter-spacing: 0;
 	line-height: 1.1em;
-	text-transform: capitalize;
+
 }
 
 #search_modal a:hover {
@@ -25194,7 +25194,7 @@ body.active-side-header.slide-right .page_header_side {
 .post-navigation a h6 {
 	margin-bottom: 0;
 	margin-top: 10px;
-	text-transform: capitalize;
+	
 }
 
 @media (max-width: 1200px) {
@@ -25478,7 +25478,7 @@ h6.entry-title:last-child {
 }
 
 .entry-meta span.author.vcard {
-	text-transform: capitalize;
+
 }
 
 .entry-meta span.author.vcard img {
@@ -25496,7 +25496,7 @@ h6.entry-title:last-child {
 .entry-meta span a:not(.btn) {
 	color: #686665;
 	display: inline-block;
-	text-transform: capitalize;
+	
 }
 
 .entry-meta span a:not(.btn):hover {
@@ -25884,7 +25884,7 @@ h6.entry-title:last-child {
 	font-weight: 300;
 	letter-spacing: 0;
 	line-height: 1.1em;
-	text-transform: capitalize;
+	
 }
 
 .no-comments,
@@ -26440,7 +26440,7 @@ dl#attachment_612 {
 }
 
 .page_copyright {
-	text-transform: capitalize;
+	
 }
 
 .page_copyright.copyright-1 {
@@ -26472,7 +26472,7 @@ dl#attachment_612 {
 		padding: 10px 12px;
 		position: static;
 		text-align: center;
-		text-transform: capitalize;
+		
 		white-space: nowrap;
 	}
 
@@ -26800,7 +26800,7 @@ dl#attachment_612 {
 
 .photoswipe-link-button {
 	color: #3a3736;
-	text-transform: capitalize;
+	
 }
 
 .photoswipe-link-button:hover span {
