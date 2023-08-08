@@ -7,6 +7,7 @@
 <!--<![endif]-->
 
 <head>
+	<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 	<title>Lamija Laminati Mostar</title>
 	<meta charset="utf-8">
 	<!--[if IE]>
@@ -380,7 +381,7 @@
 					<div class="row align-items-center">
 						<div class="col-lg-6 offset-lg-3 animate" data-animation="scaleAppear">
 							<div class="form-wrapper p-30 p-lg-60 p-xl-80 box-shadow ls">
-								<form class="contact-form c-mb-30 c-gutter-10" method="post" action="/">
+								<form class="contact-form c-mb-30 c-gutter-10">
 									<div class="row">
 										<div class="col-12 form-title">
 											<h3>Kontaktirajte nas za više informacija</h3>
@@ -390,13 +391,13 @@
 										<div class="col-sm-12">
 											<div class="form-group has-placeholder">
 												<label for="name333">Vaše ime <span class="required">*</span></label>
-												<input type="text" aria-required="true" size="30" value="" name="name" id="name333" class="form-control" placeholder="Vaše ime*">
+												<input type="text" autocomplete="off" aria-required="true" size="30" value="" name="name" id="name333" class="form-control" placeholder="Vaše ime*">
 											</div>
 										</div>
 										<div class="col-sm-12">
 											<div class="form-group has-placeholder">
 												<label for="email333">Vaš e-mail<span class="required">*</span></label>
-												<input type="email" aria-required="true" size="30" value="" name="name" id="email333" class="form-control" placeholder="Vaš e-mail*">
+												<input type="email" autocomplete="off" aria-required="true" size="30" value="" name="email" id="email333" class="form-control" placeholder="Vaš e-mail*">
 											</div>
 										</div>
 									</div>
@@ -404,14 +405,14 @@
 										<div class="col-sm-12 ">
 											<div class="form-group has-placeholder">
 												<label for="message333">Vaša poruka</label>
-												<textarea aria-required="true" rows="3" cols="45" name="message" id="message333" class="form-control" placeholder="Vaša poruka"></textarea>
+												<textarea aria-required="true" autocomplete="off" rows="3" cols="45" name="message" id="message333" class="form-control" placeholder="Vaša poruka"></textarea>
 											</div>
 										</div>
 									</div>
 									<div class="row">
 										<div class="col-sm-12 mt-10">
 											<div class="form-group">
-												<input class="btn btn-maincolor" type="submit" value="Pošaljite upit">
+												<input class="btn btn-maincolor" value="Pošaljite upit" onclick="send()">
 											</div>
 										</div>
 									</div>
@@ -505,7 +506,52 @@
 
 	<!-- Google Map Script -->
 	<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0pr5xCHpaTGv12l73IExOHDJisBP2FK4&callback=initGoogleMap"></script>
-
+	<script>
+		// Assuming you have loaded the emailjs library before using it
+		
+		// Sending the form data using emailjs
+		function send() {
+		  emailjs.init('ojsbzSk2njyFU9wbv');
+		
+		  const nameInput = document.getElementById('name333');
+		  const emailInput = document.getElementById('email333');
+		  const messageInput = document.getElementById('message333');
+		
+		  const contactForm = {
+			name: nameInput.value,
+			email: emailInput.value,
+			message: messageInput.value
+		  };
+		
+		  // Validate inputs
+		  if (!contactForm.name || !contactForm.email || !contactForm.message) {
+			alert('Molimo popunite sva polja.');
+			return;
+		  }
+		
+		  const templateParams = {
+			from_name: contactForm.name,
+			from_email: contactForm.email,
+			message: contactForm.message
+		  };
+		
+		  emailjs.send("service_2d62cte", "template_b1p2aza", templateParams)
+			.then(function(response) {
+			  alert('Mail je poslan');
+			}, function(error) {
+			  console.log("Greška u slanju maila.", error);
+			  // You can replace the console.log with your desired error handling
+			});
+		}
+		
+		// Assuming your HTML form structure is as provided in your question
+		const submitButton = document.querySelector('.btn.btn-maincolor');
+		submitButton.addEventListener('click', function(event) {
+		  event.preventDefault();
+		  send();
+		});
+		
+			</script>
 </body>
 
 </html>
