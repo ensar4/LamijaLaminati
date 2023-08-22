@@ -274,11 +274,6 @@
 
 
 							</div>
-
-							<span class="appointment">
-								<a href="contact.html" class="btn btn-maincolor">Kontaktirajte nas</a>
-							</span>
-
 						</div>
 					</div>
 				</header>
@@ -409,11 +404,14 @@
 											</div>
 										</div>
 									</div>
-									<div class="row">
-										<div class="col-sm-12 mt-10">
-											<div class="form-group">
-												<input class="btn btn-maincolor" value="Pošaljite upit" onclick="send()">
-											</div>
+									<div class="row" >
+										<div class="col-sm-12 mt-10" style="position: relative;
+										width: 300px;
+										height: 200px;" >
+												<button id="slanjeBtn2" class="btn btn-maincolor" aria-selected="false"  onclick="send1()" style=" position: absolute;
+												bottom: 10px;
+												right: 10px;">Pošaljite upit</button>	
+
 										</div>
 									</div>
 								</form>
@@ -510,7 +508,7 @@
 		// Assuming you have loaded the emailjs library before using it
 		
 		// Sending the form data using emailjs
-		function send() {
+		function send1() {
 		  emailjs.init('ojsbzSk2njyFU9wbv');
 		
 		  const nameInput = document.getElementById('name333');
@@ -545,11 +543,7 @@
 		}
 		
 		// Assuming your HTML form structure is as provided in your question
-		const submitButton = document.querySelector('.btn.btn-maincolor');
-		submitButton.addEventListener('click', function(event) {
-		  event.preventDefault();
-		  send();
-		});
+
 		
 			</script>
 </body>

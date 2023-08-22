@@ -192,6 +192,7 @@ gtag('config', 'G-1TNKM9VN3N');
 										</div>
 									</div>
 
+									
 
 								</div>
 							</div>
@@ -285,9 +286,9 @@ gtag('config', 'G-1TNKM9VN3N');
 
 							</div>
 
-							<span class="appointment">
-								<a href="contact.html" class="btn btn-maincolor">Kontaktirajte nas</a>
-							</span>
+							<!--<span class="appointment">
+								<button href="/contact.html" class="btn btn-maincolor">Kontaktirajte nas</a>
+							</span>-->
 
 						</div>
 					</div>
@@ -1069,7 +1070,7 @@ gtag('config', 'G-1TNKM9VN3N');
 									<div class="row">
 										<div class="col-sm-12 mt-10">
 											<div class="form-group">
-												<input class="btn btn-maincolor" aria-selected="false" value="Pošaljite upit" onclick="send()">
+												<button id="slanjeBtn" class="btn btn-maincolor" aria-selected="false" value="Pošaljite upit" onclick="send()">Pošaljite upit</button>	
 											</div>
 										</div>
 									</div>
@@ -1255,11 +1256,6 @@ function send() {
 }
 
 // Assuming your HTML form structure is as provided in your question
-const submitButton = document.querySelector('.btn.btn-maincolor');
-submitButton.addEventListener('click', function(event) {
-  event.preventDefault();
-  send();
-});
 
 	</script>
 </body>
